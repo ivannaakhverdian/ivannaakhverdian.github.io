@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+
+<html>
+
+    
+    <head>
+    
+  
+    </head>
+
+
+	<body>
+
+            <h1>Picture Password Lock</h1>
+
+            <hr> 
+
+            <p id ="answer"></p>
+
+
+                    <div style="text-align: center;">
+
+                    <center><img onclick="unlock('1')" src="http://www.clipartbest.com/cliparts/nTX/bBR/nTXbBRMTB.png" width="20%" height="20%">
+
+                    <img onclick= "unlock('2')" src= "http://40.media.tumblr.com/27cbe86912c580cf6b778d09109d276d/tumblr_ns4wex3Zd11uosm2eo1_400.png" width="20%" height="20%">
+
+
+                    <img onclick="unlock('3')" src= "http://www.drawinglook.com/wp-content/uploads/2016/04/Star-Drawing-Image.png" width="20%" height="20%"></center>
+                        
+                            <p id="pass">Before JavaScript Alters this</p>
+                        
+                        <br>
+
+                    </div>
+
+        
+                    <br>
+        
+        
+        <div id="congrats">
+        
+        <!--- conent will be added here if the code is correct -->
+        
+        
+        </div>
+
+	
+		<script>
+            
+            var pass1 = random(1,4);
+            var pass2 = random(1,4);
+            var pass3 = random(1,4);
+            var pass4 = random(1,4);
+            var pass5 = random(1,4);
+            var pass6 = random(1,4);
+            var total = pass1 + "" + pass2 + "" + pass3 + "" + pass4 + "" + pass5 + "" + pass6;
+            var userInput ="";
+            
+            
+            
+            function createCode(){
+                    
+                document.getElementById("pass").innerHTML = pass1 + "," + pass2 + "," + pass3 + "," + pass4 + "," + pass5 + "," + pass6;
+            
+                
+            
+            }
+            
+            createCode();
+            function random(min, max){
+            
+                return parseInt(Math.random() * (max - min) + min);
+            
+            }
+            
+            
+            function unlock (x){
+                
+                // the goal of this function is to take the user input and apply it to the total so it equals the total.
+                
+                userInput +=x;
+                document.getElementById("congrats").innerHTML = userInput;
+
+
+                
+                if (userInput==total){
+                document.getElementById("congrats").innerHTML = "You solved it.";
+                
+                }
+            
+               
+            }
+            
+            
+
+        
+        
+        </script>
+	
+    
+    
+    </body>
+
+
+
+
+</html>
