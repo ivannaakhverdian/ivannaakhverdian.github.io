@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+
+<html>
+
+    
+`<head>
+    
+    <style>
+    
+        body{
+        
+        background-image: url("http://vomzi.com/wp-content/uploads/2016/03/cute-water-gif-879.gif");
+        background-repeat: no-repeat;
+        background-attachment: fixed;
+        background-position: center;
+        color: white;
+        background-size: cover;
+        
+        }
+        
+        .one{
+        
+            background-color: #00CCFF;
+        
+        }
+        
+        img{
+        
+        height: 100px;
+        
+        }
+    
+    </style>
+    
+  
+`</head>
+
+
+	<body>
+        
+        <div style="text-align: center;">
+        
+        
+        <h1 style="font-size: 300%; color: #FFCC00">Go fish!</h1>
+        <a style="font-size: 150%; color: #FFCC00"></a>
+        <input id="fishNum" onchange="fishy(this.value)" type="number">
+        
+        <br>
+        
+        
+        <div id="fish">
+        
+            <img src="http://images.clipshrine.com/download/downloadpnglarge/Bowl-Fish-Bubbling-15298-large.png" width="20%" height="15%"></img>
+            <a>I am worth 1</a>
+            <img src= "http://www.clipartbest.com/cliparts/acq/eja/acqejaXoi.png" width="20%" height="15%"/></img>
+            <a>I am worth 5</a>
+            <img src= "http://clipartist.net/links/clipartist.net/happy_fish-1979px.png" width="20%" height="15%"></img>
+            <a>I am worth 10</a>
+            <img src= "http://pngimg.com/upload/fish_PNG1141.png" width="20%" height="15%"></img>
+            <a>I am worth 100</a>
+            
+        
+        <hr>
+        </div>
+    
+    
+    `<div id="fish">
+    
+        <!--- print the fish here -->
+    
+        </div>
+        
+         <div id="printFish">
+        
+         </div>
+
+           
+	    </div>
+        
+        
+        `<script>
+
+            function fishy(x){
+                
+                
+            
+                    while(x>=100){
+                    
+                    document.getElementById("fish").innerHTML += "<img src='http://pngimg.com/upload/fish_PNG1141.png' width='20%' height='15%'></img>";
+                    
+                    x=x-100;
+                    if(x<100){
+                        break;
+                    }
+                    }
+                        
+                        
+                while(x>=10){
+                    
+                    document.getElementById("fish").innerHTML += "<img src= 'http://clipartist.net/links/clipartist.net/happy_fish-1979px.png' width='20%' height='15%'></img>";
+                    
+                    x=x-10;
+                    if(x<10){
+                        break;
+                    }
+                    
+                }
+                        
+                        
+                    while(x>=5){
+                    
+                    document.getElementById("fish").innerHTML += "<img src= 'http://www.clipartbest.com/cliparts/acq/eja/acqejaXoi.png' width='20%' height='15%'/></img>";
+                    
+                    x=x-5;
+                    if(x<5){
+                        break;
+                    }
+                    
+                }
+                        
+                    while(x>=1){
+                    
+                    document.getElementById("fish").innerHTML += "<img src= 'http://www.clipartbest.com/cliparts/acq/eja/acqejaXoi.png' width='20%' height='15%'/></img>";
+                    
+                    x=x-1;
+                    if(x<1){
+                        break;
+                    }
+                    
+                }
+
+                    
+            }
+
+
+
+        </script>
+	
+    
+    
+    </body>
+
+
+
+
+</html>
